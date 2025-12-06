@@ -1,0 +1,6 @@
+if [ -d "./dist" ]; then
+    rm -r ./dist/
+fi
+mkdir ./dist/
+cp -r ./public/* ./dist/
+npx tsc

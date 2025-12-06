@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build": "./bin/build",
+    "watch": "npx tsx ./bin/watch.ts",
+    "start": "npx tsx ./bin/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "module": "",
+  "devDependencies": {
+    "@babylonjs/core": "^8.40.1",
+    "@types/chokidar": "^2.1.7",
+    "@types/node": "^24.10.1",
+    "chokidar": "^5.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

@@ -6,8 +6,15 @@
         "outDir": "./dist",
         "moduleResolution": "bundler",
         "strict": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        // "paths": {
+        //     "/*": ["public/assets/scripts/*"]
+        // }
     },
-    "include": ["./src"],
+    "files": [
+        "types/babylon.d.ts"
+    ],
+    "include": ["./src", "public/assets/scripts/babylon.d.ts"],
     "exclude": ["./node_modules", "./dist", "./bin"]
 }

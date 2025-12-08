@@ -14,7 +14,6 @@
   "private": true,
   "module": "",
   "devDependencies": {
-    "@babylonjs/core": "^8.40.1",
     "@types/chokidar": "^2.1.7",
     "@types/node": "^24.10.1",
     "chokidar": "^5.0.0",

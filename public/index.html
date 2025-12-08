@@ -4,59 +4,72 @@
         <title>App</title>
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
-        <link rel='stylesheet' type='text/css' href='/assets/style/main.css'/>
+        <link rel='stylesheet' type='text/css' href='assets/style/main.css'/>
     </head>
     <body>
         <div class='settings-overlay'>
-            <div class='settings ui-temp'>
+            <div class='settings'>
                 <header class='menu-title'>
                     Settings
                 </header>
-                <div class='setting ui-temp'>
-                    Setting
+                <div class='setting'>
+                    Weapon Voltage
                 </div>
-                <div class='setting ui-temp'>
-                    Setting
+                <div class='setting'>
+                    Threat Profile (additional insects)
                 </div>
-                <div class='setting ui-temp'>
-                    Setting
+                <div class='setting'>
+                    Threat Detection Sensitivity
                 </div>
-                <div class='setting ui-temp'>
-                    Setting
+                <div class='setting'>
+                    Power Saving Feature
                 </div>
-                <div class='setting ui-temp'>
-                    Setting
+                <div class='setting'>
+                    Perimeter Defense paths
+                </div>
+                <div class='setting'>
+                    Weapon crosshair
+                </div>
+                <div class='setting'>
+                    Offensive / defensive maneuvers
                 </div>
             </div>
         </div>
         <div class='ui-top'>
-            <div class='status-bar ui-temp'>
-                <div class='widget ui-temp'>
+            <div class='status-bar'>
+                <div class='widget'>
                     BATTERY: 100%
                 </div>
-                <div class='widget ui-temp'>
+                <div class='widget'>
                     WIFI: STRONG
                 </div>
-                <div class='widget ui-temp'>
-                    MODE: MANUAL
+                <div class='widget'>
+                    MODE: MANUAL | SENTINEL
                 </div>
             </div>
         </div>
-        <div class='settings-button ui-temp'></div>
+        <div class='settings-button'>
+            <div class='icon'>
+                <div class='bar'></div>
+                <div class='bar'></div>
+                <div class='bar'></div>
+            </div>
+        </div>
         <div class='control-pad-overlay'>
             <div class='control-pad-align'>
-                <div class='control-pad left ui-temp'>
+                <div class='control-pad left'>
                     <div class='joystick'>
                     </div>
                 </div>
-                <div class='control-pad right ui-temp'>
+                <div class='control-pad right'>
                     <div class='joystick'>
                     </div>
                 </div>
             </div>
         </div>
-        <div class='scene-view'>
-
-        </div>
+        <canvas class='scene-view'>
+        </canvas>
+        <script src='assets/scripts/babylon.js'></script>
+        <script src='assets/scripts/main.js'></script>
     </body>
 </html>

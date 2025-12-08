@@ -1,4 +1,120 @@
 html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.ui-temp {
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.settings-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.settings-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 2;
+}
+
+.settings {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 600px;
+    padding: 10px;
+}
+
+.settings .menu-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.setting {
+    padding: 10px;
+}
+
+.ui-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.status-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 600px;
+    gap: 5px;
+    padding: 5px;
+}
+
+.status-bar > .widget {
+    padding: 10px;
+}
+
+.control-pad-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-pad-align {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+}
+
+.control-pad {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.joystick {
+    position: relative;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.scene-view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: orange;
 }

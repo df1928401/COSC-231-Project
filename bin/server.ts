@@ -1,6 +1,7 @@
 import * as path from 'path'
 import * as http from 'http'
 import * as fs from 'fs'
+import mime from 'mime'
 
 const rootDir = path.join(__dirname, '..');
 
@@ -18,7 +19,7 @@ server.on('request', (req, res) => {
             res.end('404 not found!');
             return;
         }
-
+        console.log(req.url);
         serve(req.url, res);
 
         return;
@@ -44,7 +45,8 @@ function serve(reqPath: string, res: http.ServerResponse) {
                 res.statusCode = 500;
                 res.end('Internal server error.');
             } else {
-                res.setHeader('Content-Type', 'text/html');
+                let mimeType = mime.getType(servePath);
+                res.setHeader('Content-Type', mimeType as string);
                 res.statusCode = 200;
                 res.end(data);
             }

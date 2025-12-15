@@ -46,12 +46,20 @@ function serve(reqPath: string, res: http.ServerResponse) {
                 res.end('Internal server error.');
             } else {
                 let mimeType = mime.getType(servePath);
+
+                // console.log(servePath)
+
+                if(servePath.includes("glb")) {
+                    mimeType = "model/gltf-binary";
+                }
+
                 res.setHeader('Content-Type', mimeType as string);
                 res.statusCode = 200;
                 res.end(data);
             }
         });
     } else {
+        // console.log(servePath);
         res.setHeader('Content-Type', 'text/plain');
         res.statusCode = 404;
         res.end('404 not found!');

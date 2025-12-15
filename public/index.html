@@ -5,103 +5,124 @@
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
         <link rel='stylesheet' type='text/css' href='assets/style/main.css'/>
+        <link rel='stylesheet' type='text/css' href='assets/style/scenes.css'/>
     </head>
     <body>
-        <div class='settings-overlay'>
-            <div class='settings'>
-                <header class='menu-title'>
-                    Settings
-                </header>
-                <div class='setting'>
-                    <label class='setting-title'>Weapon Voltage</label>
-                    <input class='input-field' placeholder='10'/>
+        <div class='scene scene-setup'>
+            <div class='page intro-page'>
+                <div class='contents'>
+                    <div class='headline'>
+                        <div class='tagline'>Welcome!</div>
+                        <div class='normal'>Let's get your ZAP device setup!</div>
+                    </div>
+                    <button class='action next-button' data-next='pair'>Let's go!</button>
                 </div>
-                <div class='setting'>
-                    <label class='setting-title'>Threat Profile</label>
-                    <div class='input-row'>
-                        <div class='input-button'>Fly</div>
-                        <div class='input-button'>Bee</div>
-                        <div class='input-button'>Wasp</div>
+            </div>
+            <div class='page pair-page'>
+                <div class='contents'>
+                    <div class='headline'>
+                        <div class='tagline'>Confirm your device</div>
+                        <div class='normal'>ZAP_M123</div>
                     </div>
+                    <button class='action next-button'>Confirm</button>
                 </div>
-                <div class='setting'>
-                    <label class='setting-title'>Threat Detection Sensitivity</label>
-                    <input class='input-field' placeholder='10'/>
+            </div>
+            <div class='page name-page'>
+                <div class='contents'>
+                    <div class='headline'>
+                        <div class='tagline'>Let's name your device!</div>
+                    </div>
+                    <input class='text' id='nameInput' placeholder='Name...'/>
+                    <button class='action next-button'>Next</button>
                 </div>
-                <div class='setting '>
-                    <label class='setting-title'>Power Saving Feature</label>
-                    <div class='input-row'>
-                        <div class='input-button'>On</div>
-                        <div class='input-button'>Off</div>
+            </div>
+            <div class='page final-page'>
+                <div class='contents'>
+                    <div class='headline'>
+                        <div class='tagline'>You're all setup!</div>
                     </div>
-                </div>
-                <div class='setting'>
-                    <div class='setting-title'>
-                        Perimeter Defense paths
-                    </div>
-                    <div class='input-row'>
-                        <div class='input-button'>Auto</div>
-                        <div class='input-button'>Circle</div>
-                        <div class='input-button'>Sentinel</div>
-                    </div>
-                </div>
-                <div class='setting settings-perimeter'>
-                    <div class='setting-title'>
-                        Crosshair
-                    </div>
-                    <div class='input-row'>
-                        <div class='input-button'>Normal</div>
-                        <div class='input-button'>Minimal</div>
-                        <div class='input-button'>Advanced</div>
-                    </div>
-                </div>
-                <div class='setting'>
-                    <div class='setting-title'>
-                        Offensive / Defensive Maneuvers
-                    </div>
-                    <div class='input-row'>
-                        <div class='input-button'>Default</div>
-                        <div class='input-button'>Reserved</div>
-                        <div class='input-button'>Aggressive</div>
-                    </div>
+                    <button class='action next-button'>Let's go!</button>
                 </div>
             </div>
         </div>
-        <div class='ui-top'>
-            <div class='status-bar'>
-                <div class='widget'>
-                    BATTERY: 100%
-                </div>
-                <div class='widget'>
-                    WIFI: STRONG
-                </div>
-                <div class='widget'>
-                    MODE: MANUAL | SENTINEL
-                </div>
-            </div>
-        </div>
-        <div class='settings-button'>
-            <div class='icon'>
-                <div class='bar'></div>
-                <div class='bar'></div>
-                <div class='bar'></div>
-            </div>
-        </div>
-        <div class='control-pad-overlay'>
-            <div class='control-pad-align'>
-                <div class='control-pad left'>
-                    <div class='joystick'>
+        <div class='scene scene-main'>
+            <div class='settings-overlay'>
+                <div class='settings'>
+                    <header class='menu-title'>
+                        Settings
+                    </header>
+                    <div class='setting'>
+                        <label class='setting-title'>Weapon Voltage</label>
+                        <input type='number' class='input-field voltage-input' value='5' min='1' max='10'/>
+                    </div>
+                    <div class='setting'>
+                        <label class='setting-title'>Threat Profile</label>
+                        <div class='input-row'>
+                            <div class='input-button threat-fly-input on'>Fly</div>
+                            <div class='input-button threat-bee-input off'>Bee</div>
+                            <div class='input-button threat-wasp-input off'>Wasp</div>
+                        </div>
+                    </div>
+                    <div class='setting'>
+                        <label class='setting-title'>Threat Detection Sensitivity</label>
+                        <input type='number' class='input-field detection-input' placeholder='10' min='1' max='10'/>
+                    </div>
+                    <div class='setting '>
+                        <label class='setting-title'>Power Saving Feature</label>
+                        <div class='input-row'>
+                            <div class='input-button saving-on-input on'>On</div>
+                            <div class='input-button saving-off-input off'>Off</div>
+                        </div>
+                    </div>
+                    <div class='setting'>
+                        <div class='setting-title'>
+                            Perimeter Defense paths
+                        </div>
+                        <div class='input-row'>
+                            <div class='input-button perimeter-manual-input on'>Manual</div>
+                            <div class='input-button perimeter-sentinel-input off'>Sentinel</div>
+                        </div>
+                    </div>
+                    <div class='setting settings-perimeter'>
+                        <div class='setting-title'>
+                            Crosshair
+                        </div>
+                        <div class='input-row'>
+                            <div class='input-button crosshair-normal-input on'>Normal</div>
+                            <div class='input-button crosshair-minimal-input off'>Off</div>
+                        </div>
                     </div>
                 </div>
-                <div class='control-pad right'>
-                    <div class='joystick'>
+            </div>
+            <div class='ui-top'>
+                <div class='status-bar'>
+                    <div class='widget device-name'>
+                        Name
+                    </div>
+                    <div class='widget'>
+                        BATTERY: 100%
+                    </div>
+                    <div class='widget'>
+                        WIFI: STRONG
+                    </div>
+                    <div class='widget'>
+                        MODE: MANUAL
                     </div>
                 </div>
             </div>
+            <div class='settings-button'>
+                <div class='icon'>
+                    <div class='bar'></div>
+                    <div class='bar'></div>
+                    <div class='bar'></div>
+                </div>
+            </div>
+            <canvas class='simulation-view'>
+            </canvas>
+            <script src='assets/scripts/babylon.js'></script>
+            <script src='assets/scripts/babylonjs.loaders.js'></script>
+            <script src='assets/scripts/main.js'></script>
+            <script src='assets/scripts/setup.js'></script>
         </div>
-        <canvas class='scene-view'>
-        </canvas>
-        <script src='assets/scripts/babylon.js'></script>
-        <script src='assets/scripts/main.js'></script>
     </body>
 </html>

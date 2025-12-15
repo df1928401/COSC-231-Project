@@ -1,0 +1,90 @@
+.scene {
+    height: 100%;
+}
+
+.scene-main {
+    display: none;
+}
+
+.scene-setup {
+    display: block;
+}
+
+.page {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* PAGES */
+
+.intro-page {
+    display: none;
+}
+
+.pair-page {
+    display: none;
+}
+
+.name-page {
+
+}
+
+/* PAGES */
+
+.device-preview {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+}
+
+.page .contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    gap: 20px;
+}
+
+.page .headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px 0;
+}
+
+.page .tagline {
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1em;
+    text-align: center;
+}
+
+.page .normal {
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.page .action {
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(61, 97, 228);
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+.page .text {
+    padding: 10px;
+    font-size: 1.25em;
+    border: 1px solid black;
+    border-radius: 4px;
+}
